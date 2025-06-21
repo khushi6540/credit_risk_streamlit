@@ -1,6 +1,6 @@
-streamlit 
+streamlit==1.35.0 
 numpy
 pickle
 pandas
-sklearn
+scikit-learn
 gzip
