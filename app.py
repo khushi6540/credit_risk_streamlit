@@ -1,12 +1,12 @@
 import streamlit as st
 import numpy as np
-import pickle
 import pandas as pd
+import joblib
 import gzip
-# Load model and scaler
-with gzip.open("model.pkl.gz", "rb") as f:
-    model = pickle.load(f)
 
+# Load model
+with gzip.open("model.joblib.gz", "rb") as f:
+    model = joblib.load(f)
 
 
 # App title
