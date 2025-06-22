@@ -3,9 +3,11 @@ import numpy as np
 import pandas as pd
 import joblib
 import gzip
+from pathlib import Path
 
+model_path = Path(__file__).parent / "model.joblib.gz"
 # Load model
-with gzip.open("model.joblib.gz", "rb") as f:
+with gzip.open(model_path, "rb") as f:
     model = joblib.load(f)
 
 
